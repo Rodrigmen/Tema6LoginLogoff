@@ -21,7 +21,7 @@ $descUsuario = $_SESSION['usuarioDAW2LoginLogoffMulticapaPOO']->getDescUsuario()
 $ultimaConexion = $_SESSION['usuarioDAW2LoginLogoffMulticapaPOO']->getFechaHoraUltimaConexion();
 $imagenUsuario = $_SESSION['usuarioDAW2LoginLogoffMulticapaPOO']->getImagenPerfil();
 
-$vista = $vistas['inicio'];
-require_once $vistas['layout'];
+$vista = $vistas['inicio']; //indicas la vista que va a cargar el layout
+require_once $vistas['layout']; //llamas al layout
 
 ?>
