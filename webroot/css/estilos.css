@@ -46,8 +46,24 @@ fieldset{
     border:0;
 
 }
-#cookies{
-    float:right;
+.botones{
+    text-align: center;
+}
+
+.botones button{
+    border: none;
+    background-color: #e7e7e7; 
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+.botones button:hover{
+    color:white;
+    background-color: black;
 }
 .enter{
     font-size: 2vh;
@@ -167,4 +183,16 @@ footer ul li #imggit{
 
 footer ul li #imggit:hover{
     filter: drop-shadow(0 2px 5px white);
+}
+
+.respuesta{
+    text-align: center;
+}
+
+.bienvenida{
+     padding-bottom: 2%;
+}
+.respuesta p{
+    font-size: 3vh;
+    margin: 2vh;
 }

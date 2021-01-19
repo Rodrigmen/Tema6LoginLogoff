@@ -5,13 +5,9 @@
     <a href="../../../../index.html">
         <img class="imgprinc" id="casa" src="webroot/css/img/inicio.png" alt="Página Principal" title="Página Principal"/>
     </a>
-    <h1 id="titulo">Inicio de sesión</h1>
+    <h1 id="titulo">Login</h1>
 </header>
 <main>
-    <form id="cookies" name="formularioIdioma" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-        <button <?php echo ($_COOKIE['idioma'] == "es") ? "style='color: black;'" : null; ?> class="idioma " type="submit" name="idiomaElegido" value="es"> Castellano</button>
-        <button <?php echo ($_COOKIE['idioma'] == "en") ? "style='color: black;'" : null; ?> class="idioma" type="submit" name="idiomaElegido" value="en"> English</button>
-    </form>
     <form class="enter" name="login" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
 
         <div class="required">
@@ -31,5 +27,10 @@
             <button class="button" type="submit" name="IniciarSesion"><?php echo $aLang[$_COOKIE['idioma']]['login']; ?></button>           
         </div>
 
+    </form>
+    
+    <form class="botones" name="formularioIdioma" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+        <button <?php echo ($_COOKIE['idioma'] == "es") ? "style='color: orangered;'" : null; ?> class="idioma " type="submit" name="idiomaElegido" value="es"> Castellano</button>
+        <button <?php echo ($_COOKIE['idioma'] == "en") ? "style='color: orangered;'" : null; ?> class="idioma" type="submit" name="idiomaElegido" value="en"> English</button>
     </form>
 </main>
