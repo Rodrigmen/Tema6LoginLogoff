@@ -24,13 +24,14 @@
         </div>
 
         <div>
-            <button class="button" type="submit" name="IniciarSesion"><?php echo $aLang[$_COOKIE['idioma']]['login']; ?></button>           
+            <button class="button" type="submit" name="IniciarSesion"><?php echo $aLang[$_COOKIE['idioma']]['login']; ?></button>    
+            <button class="button" type="submit" name="Registro"><?php echo $aLang[$_COOKIE['idioma']]['signup']; ?></button> 
         </div>
 
     </form>
-    
+
     <form class="botones" name="formularioIdioma" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-        <button <?php echo ($_COOKIE['idioma'] == "es") ? "style='color: orangered;'" : null; ?> class="idioma " type="submit" name="idiomaElegido" value="es"> Castellano</button>
-        <button <?php echo ($_COOKIE['idioma'] == "en") ? "style='color: orangered;'" : null; ?> class="idioma" type="submit" name="idiomaElegido" value="en"> English</button>
+        <button <?php echo ($_COOKIE['idioma'] == "es") ? "style='color: orangered;'" : null; ?> class="idioma " type="submit" name="idiomaElegido" value="es">Castellano</button>
+        <button <?php echo ($_COOKIE['idioma'] == "en") ? "style='color: orangered;'" : null; ?> class="idioma" type="submit" name="idiomaElegido" value="en">English</button>
     </form>
 </main>

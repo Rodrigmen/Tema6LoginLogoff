@@ -72,6 +72,9 @@ fieldset{
     margin: 8% auto;
     background-color:#ccc;
 }
+.enter button{
+    margin-top: 1vh;
+}
 
 form label{ 
     margin-left: 10%;
@@ -89,6 +92,7 @@ form input{
 }
 form input[type="text"], form input[type="password"] {
     width:50%;
+    background-color: white;
     border-radius:3px;
 
 }
@@ -190,7 +194,7 @@ footer ul li #imggit:hover{
 }
 
 .bienvenida{
-     padding-bottom: 2%;
+    padding-bottom: 2%;
 }
 .respuesta p{
     font-size: 3vh;

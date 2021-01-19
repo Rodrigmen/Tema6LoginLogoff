@@ -1,11 +1,12 @@
 <?php
+
 /**
  *   @author: Javier Nieto Lorenzo
  *   @since: 02/12/2020
  *   cInicio
  */
-if(!isset($_COOKIE['idioma'])){
-    setcookie('idioma','es',time()+2592000); // crea la cookie 'idioma' con el valor 'es' para 30 dias
+if (!isset($_COOKIE['idioma'])) {
+    setcookie('idioma', 'es', time() + 2592000); // crea la cookie 'idioma' con el valor 'es' para 30 dias
     header('Location: index.php');
     exit;
 }
@@ -20,7 +21,7 @@ define("OBLIGATORIO", 1); // defino e inicializo la constante a 1 para los campo
 
 $entradaOK = true;
 
-$aErrores = [ //declaro e inicializo el array de errores
+$aErrores = [//declaro e inicializo el array de errores
     'CodUsuario' => null,
     'Password' => null
 ];
@@ -29,9 +30,9 @@ $aErrores = [ //declaro e inicializo el array de errores
 if (isset($_REQUEST["IniciarSesion"])) { // comprueba que el usuario le ha dado a al boton de IniciarSesion y valida la entrada de todos los campos
     $aErrores['CodUsuario'] = validacionFormularios::comprobarAlfaNumerico($_REQUEST['CodUsuario'], 15, 3, OBLIGATORIO); // comprueba que la entrada del codigo de usuario es correcta
 
-    $aErrores['Password'] = validacionFormularios::validarPassword($_REQUEST['Password'], 8, 1, 1, OBLIGATORIO);// comprueba que la entrada del password es correcta
+    $aErrores['Password'] = validacionFormularios::validarPassword($_REQUEST['Password'], 8, 1, 1, OBLIGATORIO); // comprueba que la entrada del password es correcta
 
-    if ($aErrores['CodUsuario'] != null || $aErrores['Password']!=null) { // compruebo si hay algun mensaje de error en algun campo
+    if ($aErrores['CodUsuario'] != null || $aErrores['Password'] != null) { // compruebo si hay algun mensaje de error en algun campo
         $entradaOK = false; // le doy el valor false a $entradaOK
         unset($_REQUEST);
     }
@@ -45,8 +46,7 @@ if ($entradaOK) { // si la entrada esta bien recojo los valores introducidos y h
     $password = $_REQUEST['Password'];
 
     $oUsuario = UsuarioPDO::validarUsuario($usuario, $password);
-    if(isset($oUsuario)){ // si encuentra el usuario con el codigo de usuario y el password introducido
-
+    if (isset($oUsuario)) { // si encuentra el usuario con el codigo de usuario y el password introducido
         $_SESSION['usuarioDAW2LoginLogoffMulticapaPOO'] = $oUsuario; // guarda en la session el objeto usuario
 
 
@@ -54,7 +54,6 @@ if ($entradaOK) { // si la entrada esta bien recojo los valores introducidos y h
 
         header('Location: index.php');
         exit;
-
     }
 }
 
