@@ -16,7 +16,7 @@
             <ul>
                 <li>&copy2020-2021 | Rodrigo Robles Miñambres</li>
                 <li>
-                    <a target="_blank" href="https://github.com/Rodrigmen/Tema6LoginLogoff">
+                    <a target="_blank" href="https://github.com/Rodrigmen/Tema6LoginLogoff/tree/master">
                         <img id="imggit" title="GitHub" src="webroot/css/img/github.png"  alt="GITHUB">
                     </a>
                 </li>
