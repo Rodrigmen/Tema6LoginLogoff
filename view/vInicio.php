@@ -1,7 +1,3 @@
-<header>
-    <h1 id="titulo">Inicio</h1>
-</header>
-
 <main class="respuesta">
     <article>
         <h2 class="bienvenida"><?php echo $aLang[$_COOKIE['idioma']]['welcome'] ?> </h2>
