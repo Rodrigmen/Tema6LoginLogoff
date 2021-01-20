@@ -1,206 +1,201 @@
-/* 
-    Autor.- Javier Nieto 
-    Fecha de modificacion.- 2020/09/29
-*/
-
-@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
-@font-face {
-    font-family: "Bangers";
-    src: url(../fonts/Bangers-Regular.ttf);
-}
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
-@font-face {
-    font-family: "Roboto";
-    src: url(../fonts/Roboto-Medium.ttf);
-}
-* {
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
-}
-a{
-    text-decoration: none;
-}
-html{
-    max-width: 100vw;
-    max-height: 100vh;
-}
+    font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
 
-body {
-    width: 100%;
-    margin: 0px;
 }
-
-/* -------- HEADER -------- */
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 10px;
-    background-color: rgb(255 137 0 / 0.74);
-    height: 50px;
-    font-family: "Bangers";
-}
-
-header > h1 {
-    margin: auto 10px;
+/*HEADER -> TITULO E ICONO DE VOLVER ATRÁS*/
+header{
+    padding: 2%;
     text-align: center;
-    font-size: 45px;
+    background: #A9C6FF;
+}
+h1{
+    font-size: 4vh;
+    color:white;
+    border-bottom: 1vh solid black;
+}
+header img{
+    float:left;
+
+}
+/*Icono de flecha y GIT*/
+.imgprinc{
+    width:2.5%;
+    height:2.5%;
+    transition: 0.5s;
+
+}
+#casa{
+    float:right;
+}
+.imgprinc:hover{
+    filter: drop-shadow(0 2px 5px white);
+
 }
 
-.github>img{
-    width: 40px;
+/*BODY*/
+body{
+    background: #A9C6FF;
 }
+/*BUSCADOR -> FORMULARIO*/
+fieldset{
+    border:0;
 
-/* -------- MAIN -------- */
-
-main {
-    min-height: calc(100vh - 140px);
-    margin: 20px; 
-    font-family: "Roboto";
 }
-/* -------- FOOTER -------- */
-
-footer {
-    height: 50px;
+.botones{
     text-align: center;
-    background-color: #908c8c75;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    font-family: "Bangers";
-    width: 100vw;
 }
-footer > address {
-    font-size: 20px;
-    padding: 10px 10px;
 
-}
-footer a{
-    text-decoration: none;
+.botones button{
+    width: 20%;
+    border: none;
+    background-color: #e7e7e7; 
     color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
 }
-
-.flex-container-align-item-center{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+.botones button:hover{
+    color:white;
+    background-color: black;
 }
-.button{
-    font-size: 1.2rem;
-    background-color: #8bd6fb;
-    border-radius: 20px;
-    border: 2px solid #6bb3ff;
+.enter{
+    font-size: 2vh;
+    width: 50%;
+    border-radius:10px;
+    margin: 8% auto;
+    background-color:#ccc;
 }
-
-
-.required{
-    background-color: #ffcb8e;
+.enter button{
+    margin-top: 1vh;
 }
-
-form[name="login"],form[name="singup"],form[name="editarPerfil"]{
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    border: 6px solid #ffa842;
-    padding: 40px;
-    border-radius: 50px;
+.respuesta{
+    text-align: center;
+    margin: 2vh;
+    font-size: 3vh;
 }
-form[name="login"],form[name="singup"],form[name="editarPerfil"]{
-    min-width:200px;
+.respuesta button{
+    margin: 4vh;
 }
-form[name="login"] *,form[name="singup"] *,form[name="editarPerfil"] *{
-    font-size:1.5rem;
+form label{ 
+    margin-left: 10%;
+    width: 20%;
+    padding: 2%;
+    font-weight:bold;
+    display:inline-block;
 }
-
-form[name="login"] div *,form[name="singup"] div *,form[name="editarPerfil"] div *{
-    display: block;
-    margin:5px;
-    text-align: center
+form input{
+    font-size: 2vh;
+    text-align: center;
+    padding:1% 5%;
+    margin:2% 0;
+    display:inline-block;
 }
-
-input[name="IniciarSesion"]{
-    margin-left:auto;
-}
-
-form[name="login"] input,form[name="singup"] input,form[name="editarPerfil"] input{
-    width:160px;
-    border: none;
-    border-bottom: 3px solid #545454;
-    border-radius: 5px;
-    margin: auto;
-}
-
-form[name="login"] span, form[name="singup"] span, form[name="editarPerfil"] span{
-    font-size: 1rem; 
-}
-
-input[readonly=""]{
-    background: none;
-}
-
-.logout{
-    font-size: 1.2rem;
+form input[type="text"], form input[type="password"] {
+    width:50%;
     background-color: white;
-    border-radius: 7px;
-    color: #616161;
-    font-weight: bold;
-    border: 4px solid white;
-    margin-right: 6px;
+    border-radius:3px;
+
+}
+input:focus {
+    border-color: #00BA68;
+    background-color: #FAFBFC;
+    outline: 5px;
+    color:#008508;
+}
+input:placeholder-shown {
+    background-color: #FAFBFC;
 }
 
-.fixed{
+form button{
+    width: 100%;
+    background-color: black;
+    border:none;
+    border-radius:5px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+form input[name="eliminar"]{
+    text-decoration: none;
+    background-color:red;
+}
+
+input:read-only{
+    background-color: #EEEDD3;
+}
+
+form button:hover{
+    cursor:pointer;
+    color:black;
+    background: white;
+}
+form button[name="Cancelar"]:hover{
+    background: #A43533;
+}
+form input[name="cambiarPassword"]:hover{
+    text-decoration: none;
+    cursor:pointer;
+    color:white;
+    background: grey;
+}
+form input[name="cancelar"]:hover{
+    text-decoration: none; 
+    cursor:pointer;
+    color:black;
+    background: red;
+}
+form input[name="eliminar"]:hover{
+    text-decoration: none;
+    background-color:red;
+}
+.errores{
+    font-size: 2.5vh;
+    text-align: center;
+    color:red;
+    margin:1% auto;
+}
+.required{
+    background-color: #ADB9C5;
+}
+
+/*-----------FOOTER-----------*/
+footer{
+    font-size: 3vh;
+    background: #A9C6FF;
+    color: black;
     position: fixed;
+    height: 10%;
+    left: 0;
     bottom: 0;
-}
-
-.idioma{
-    font-size: 1.3rem;
-    border: none;
-    background: none;
-    color: blue;
-} 
-
-form[name="formularioIdioma"]{
-    position: absolute;
-    top: 52px;
-    right: 0;
-}
-
-#fotoPerfil{
-    width: 50px;
-}
-
-#borrarUsuario{
-    background-color: #fd849b;
-    border-radius: 20px;
-    border: 2px solid #f24646;
-}
-
-
-.main-container-inicio{
-    font-size: 2rem;
+    width: 100%;
     text-align: center;
 }
-.buttons-header-inicio {
-    width: 500px;
-    height: 50px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-.buttons-header-inicio *{
-    margin: 6px 5px auto 5px;
+
+footer ul li{
+    display:inline;
+    list-style: none;
+    padding-left:3px;
+    padding-right:3px;
 }
 
-.buttons-header-inicio #fotoPerfil{
-    margin: 0 !important;
+footer ul li #imggit{
+    width:3%;
+    height:3%;
+    transition: 0.5s;
 }
-.button-inicio{
-    font-size: 1.2rem;
-    background-color: white;
-    border-radius: 7px;
-    color: #616161;
-    font-weight: bold;
-    border: 4px solid white;
-    margin-right: 6px;
+
+footer ul li #imggit:hover{
+    filter: drop-shadow(0 2px 5px white);
 }
