@@ -10,7 +10,7 @@
     </head>
     <body>
 
-        <?php require_once $vista ?>
+        <?php require_once $vistaEnCurso ?>
 
         <footer>
             <ul>

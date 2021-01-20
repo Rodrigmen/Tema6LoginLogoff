@@ -51,6 +51,7 @@ fieldset{
 }
 
 .botones button{
+    width: 20%;
     border: none;
     background-color: #e7e7e7; 
     color: black;
@@ -75,7 +76,14 @@ fieldset{
 .enter button{
     margin-top: 1vh;
 }
-
+.respuesta{
+    text-align: center;
+    margin: 2vh;
+    font-size: 3vh;
+}
+.respuesta button{
+    margin: 4vh;
+}
 form label{ 
     margin-left: 10%;
     width: 20%;
@@ -106,7 +114,7 @@ input:placeholder-shown {
     background-color: #FAFBFC;
 }
 
-form[name="login"] button{
+form button{
     width: 100%;
     background-color: black;
     border:none;
@@ -128,10 +136,13 @@ input:read-only{
     background-color: #EEEDD3;
 }
 
-form[name="login"] button:hover{
+form button:hover{
     cursor:pointer;
     color:black;
     background: white;
+}
+form button[name="Cancelar"]:hover{
+    background: #A43533;
 }
 form input[name="cambiarPassword"]:hover{
     text-decoration: none;
@@ -187,16 +198,4 @@ footer ul li #imggit{
 
 footer ul li #imggit:hover{
     filter: drop-shadow(0 2px 5px white);
-}
-
-.respuesta{
-    text-align: center;
-}
-
-.bienvenida{
-    padding-bottom: 2%;
-}
-.respuesta p{
-    font-size: 3vh;
-    margin: 2vh;
 }

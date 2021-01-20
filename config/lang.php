@@ -10,20 +10,25 @@ $aLang = [
         'password' => 'Contraseña',
         'login' => 'Iniciar Sesion',
         'signup' => '¿Eres nuevo? Registrate aquí',
+        'sign' => 'Registrarse',
         'title' => 'Programa',
         'logoff' => 'Cerrar Sesion',
         'welcome' => 'Bienvenido/a ' . (isset($usuarioActual) ? $usuarioActual->getDescUsuario() : null),
         'numConnections' => 'Se ha conectado ' . (isset($usuarioActual) ? $usuarioActual->getNumConexiones() : null) . ' veces',
         'numConnectionsWelcome' => 'Esta es la primera vez que se conecta',
-        'lastConnection' => 'Ultima conexion: ' . (isset($usuarioActual) ? date('d/m/Y H:i:s', $usuarioActual->getFechaHoraUltimaConexion()) : null),
+        'lastConnection' => 'Última conexión: ' . (isset($usuarioActual) ? date('d/m/Y H:i:s', $usuarioActual->getFechaHoraUltimaConexion()) : null),
         'details' => 'Detalle',
-        'editProfile' => 'Editar Perfil'
+        'editProfile' => 'Editar Perfil',
+        'description' => 'Descripción',
+        'confirmPassword' => 'Repite la contraseña',
+        'cancel' => 'Cancelar'
     ],
     'en' => [
         'user' => 'User',
         'password' => 'Password',
         'login' => 'Login',
         'signup' => 'Are you new? Sign up here',
+        'sign' => 'Sign Up',
         'title' => 'Program',
         'logoff' => 'Logoff',
         'welcome' => 'Welcome ' . (isset($usuarioActual) ? $usuarioActual->getDescUsuario() : null),
@@ -31,7 +36,10 @@ $aLang = [
         'numConnectionsWelcome' => 'This is the first time you connect',
         'lastConnection' => 'Last connection: ' . (isset($usuarioActual) ? date('d/m/Y H:i:s', $usuarioActual->getFechaHoraUltimaConexion()) : null),
         'details' => 'Detail',
-        'editProfile' => 'Edit Profile'
+        'editProfile' => 'Edit Profile',
+        'description' => 'Description',
+        'confirmPassword' => 'Repeat the password',
+        'cancel' => 'Cancel'
     ]
 ];
 ?>
