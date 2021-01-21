@@ -8,7 +8,7 @@
     <h1 id="titulo">Login</h1>
 </header>
 <main>
-    <form class="enter" name="login" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+    <form id="login" class="enter" name="login" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
 
         <div class="required">
             <label for="CodUsuario"><?php echo $aLang[$_COOKIE['idioma']]['user']; ?></label>

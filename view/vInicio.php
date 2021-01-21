@@ -1,3 +1,6 @@
+<header>
+    <h1 id="titulo">Inicio</h1>
+</header>
 <main class="respuesta">
     <article>
         <h2 class="bienvenida"><?php echo $aLang[$_COOKIE['idioma']]['welcome'] ?> </h2>
@@ -6,6 +9,7 @@
     </article>
     <form name="logout" class="botones" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
         <button class="logout" type="submit" name='cerrarSesion'><?php echo $aLang[$_COOKIE['idioma']]['logoff']; ?></button>
+        <button class="logout" type="submit" name='editProfile'><?php echo $aLang[$_COOKIE['idioma']]['editProfile']; ?></button>
     </form>
 </main>
 </body>

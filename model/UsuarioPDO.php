@@ -23,6 +23,22 @@ class UsuarioPDO {
         return $resultado;
     }
 
+    public static function editarUsuario($codUsuario, $descUsuario) {
+        $consulta = "Update T01_Usuario set T01_DescUsuario=? where T01_CodUsuario=?";
+        $resultado = DBPDO::ejecutaConsulta($consulta, [$descUsuario, $codUsuario]);
+        
+        $consultaDatosUsuario = "Select * from T01_Usuario where T01_CodUsuario=?";
+        $resultadoDatosUsuario = DBPDO::ejecutaConsulta($consultaDatosUsuario, [$codUsuario]); // guardo en la variabnle resultado el resultado que me devuelve la funcion que ejecuta la consulta con los paramtros pasados por parmetro
+
+        if ($resultadoDatosUsuario->rowCount() > 0) { // si la consulta me devuleve algun resultado
+            $oUsuarioConsulta = $resultadoDatosUsuario->fetchObject(); // guardo en la variable el resultado de la consulta en forma de objeto
+            // instanciacion de un objeto Usuario con los datos del usuario
+            $oUsuario = new Usuario($oUsuarioConsulta->T01_CodUsuario, $oUsuarioConsulta->T01_Password, $oUsuarioConsulta->T01_DescUsuario, $oUsuarioConsulta->T01_NumConexiones, $oUsuarioConsulta->T01_FechaHoraUltimaConexion, $oUsuarioConsulta->T01_Perfil, $oUsuarioConsulta->T01_ImagenUsuario);
+        }
+
+        return $oUsuario;
+    }
+
     public static function altaUsuario($codUsuario, $password, $descripcion) {
         $oUsuario = null;
 

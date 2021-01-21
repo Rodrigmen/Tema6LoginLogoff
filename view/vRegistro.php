@@ -1,7 +1,7 @@
 <header>
-    <a href="../indexProyectoDWES.php">
+    <!-- <a href="../indexProyectoDWES.php">
         <img class="imgprinc" src="webroot/css/img/flechaatras.png" alt="Atrás" title="Atrás"/>
-    </a>
+    </a>-->
     <a href="../../../../index.html">
         <img class="imgprinc" id="casa" src="webroot/css/img/inicio.png" alt="Página Principal" title="Página Principal"/>
     </a>
