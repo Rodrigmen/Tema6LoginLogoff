@@ -23,10 +23,17 @@ class UsuarioPDO {
         return $resultado;
     }
 
+    public static function borrarUsuario($codUsuario) {
+        $consulta = "DELETE FROM T01_Usuario WHERE T01_CodUsuario=?";
+        $resultado = DBPDO::ejecutaConsulta($consulta, [$codUsuario]);
+
+        return $resultado;
+    }
+
     public static function editarUsuario($codUsuario, $descUsuario) {
         $consulta = "Update T01_Usuario set T01_DescUsuario=? where T01_CodUsuario=?";
         $resultado = DBPDO::ejecutaConsulta($consulta, [$descUsuario, $codUsuario]);
-        
+
         $consultaDatosUsuario = "Select * from T01_Usuario where T01_CodUsuario=?";
         $resultadoDatosUsuario = DBPDO::ejecutaConsulta($consultaDatosUsuario, [$codUsuario]); // guardo en la variabnle resultado el resultado que me devuelve la funcion que ejecuta la consulta con los paramtros pasados por parmetro
 

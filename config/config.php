@@ -9,7 +9,8 @@ $controladores = [
     "login" => "controller/cLogin.php",
     "inicio" => "controller/cInicio.php",
     "registro" => "controller/cRegistro.php",
-    "editProfile" => "controller/cMiCuenta.php"
+    "editProfile" => "controller/cMiCuenta.php",
+    "deleteAccount" => "controller/cBorrarCuenta.php"
 ];
 
 $vistas = [
@@ -17,7 +18,8 @@ $vistas = [
     "login" => "view/vLogin.php",
     "inicio" => "view/vInicio.php",
     "registro" => "view/vRegistro.php",
-    "editProfile" => "view/vMiCuenta.php"
+    "editProfile" => "view/vMiCuenta.php",
+    "deleteAccount" => "view/vBorrarCuenta.php"
 ];
 
 ?>

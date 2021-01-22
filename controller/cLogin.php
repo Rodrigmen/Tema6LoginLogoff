@@ -54,6 +54,7 @@ if (isset($_REQUEST['Registrarse'])) { // si se ha pulsado el boton de registrar
     }
 
     if ($entradaOK) { // si la entrada esta bien recojo los valores introducidos y hago su tratamiento
+        UsuarioPDO::actualizarUltimaConexion($_REQUEST['CodUsuario']);
         $_SESSION['usuarioDAW2LoginLogoffMulticapaPOO'] = $oUsuario; // guarda en la session el objeto usuario
         $_SESSION['paginaEnCurso'] = $controladores['inicio']; // guardamos en la variable de sesion 'pagina' la ruta del controlador del inicio
 

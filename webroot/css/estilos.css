@@ -112,7 +112,7 @@ form input[type="text"], form input[type="password"] {
     border-radius:3px;
 
 }
-form input[name="Perfil"], form input[name="CodUsuario"]{
+form input[name="Perfil"], form input[name="CodUsuario"], form input[name="DescUsuario"]{
     background-color: #EEEDD3;
 }
 #login input{
@@ -140,7 +140,12 @@ form button{
     display: inline-block;
     font-size: 16px;
 }
-
+form button[name="editProfile"]:hover{
+    background-color: #2C6DA4;
+}
+form button[name="deleteAccount"]:hover{
+    background-color: #B3283F;
+}
 form button:hover{
     cursor:pointer;
     color:black;

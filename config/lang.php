@@ -11,6 +11,8 @@ $aLang = [
         'login' => 'Iniciar Sesion',
         'signup' => '¿Eres nuevo? Registrate aquí',
         'logoff' => 'Cerrar Sesion',
+        'start'=> 'Inicio',
+        'registration'=> 'Registro',
         'welcome' => 'Bienvenido/a ' . (isset($usuarioActual) ? $usuarioActual->getDescUsuario() : null),
         'numConnections' => 'Se ha conectado ' . (isset($usuarioActual) ? $usuarioActual->getNumConexiones() : null) . ' veces',
         'numConnectionsWelcome' => 'Esta es la primera vez que se conecta',
@@ -23,7 +25,8 @@ $aLang = [
         'profile' => 'Perfil',
         'NumConex' => 'Número de conexiones',
         'DateLastConex' => 'Fecha de la última conexión',
-        'accept'=>'Aceptar'
+        'accept'=>'Aceptar',
+        'deleteAccount'=> 'Borrar Cuenta'
     ],
     'en' => [
         'user' => 'User',
@@ -31,6 +34,8 @@ $aLang = [
         'login' => 'Login',
         'signup' => 'Are you new? Sign up here',
         'logoff' => 'Logoff',
+        'start'=> 'Start',
+        'registration'=> 'Registration',
         'welcome' => 'Welcome ' . (isset($usuarioActual) ? $usuarioActual->getDescUsuario() : null),
         'numConnections' => 'You have connected ' . (isset($usuarioActual) ? $usuarioActual->getNumConexiones() : null) . ' times',
         'numConnectionsWelcome' => 'This is the first time you connect',
@@ -44,7 +49,8 @@ $aLang = [
         'profile' => 'Profile',
         'NumConex' => 'Number of connections',
         'DateLastConex' => 'Date of last connection',
-        'accept'=>'Accept'
+        'accept'=>'Accept',
+        'deleteAccount'=> 'Delete Account'
     ]
 ];
 ?>

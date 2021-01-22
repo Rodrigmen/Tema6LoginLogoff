@@ -1,5 +1,5 @@
 <header>
-    <h1 id="titulo"><?php echo $aLang[$_COOKIE['idioma']]['editProfile']; ?></h1>
+    <h1 id="titulo"><?php echo $aLang[$_COOKIE['idioma']]['deleteAccount']; ?></h1>
 </header>
 <main>
     <form class="enter" name="edit" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
@@ -13,7 +13,7 @@
         <!-----------------DESCRIPCIÓN----------------->
         <div class="required">
             <label for="DescUsuario"><?php echo $aLang[$_COOKIE['idioma']]['description']; ?></label>
-            <input type="text" id="DescUsuario" name="DescUsuario"  value="<?php echo $DescUser ?>"/>
+            <input type="text" id="DescUsuario" name="DescUsuario"  value="<?php echo $DescUser ?>" readonly/>
         </div>
         <!-----------------PERFIL----------------->
         <div class="required">

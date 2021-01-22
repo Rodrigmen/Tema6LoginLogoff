@@ -5,7 +5,7 @@
     <a href="../../../../index.html">
         <img class="imgprinc" id="casa" src="webroot/css/img/inicio.png" alt="Página Principal" title="Página Principal"/>
     </a>
-    <h1 id="titulo">Login</h1>
+    <h1 id="titulo"><?php echo $aLang[$_COOKIE['idioma']]['login']; ?></h1>
 </header>
 <main>
     <form id="login" class="enter" name="login" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
