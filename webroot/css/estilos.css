@@ -73,6 +73,10 @@ fieldset{
     margin: 8% auto;
     background-color:#ccc;
 }
+.enter[name="edit"]{
+    margin: 4% auto;
+
+}
 .enter button{
     margin-top: 1vh;
 }
@@ -98,11 +102,21 @@ form input{
     margin:2% 0;
     display:inline-block;
 }
+
+input:read-only{
+    background-color: #EEEDD3;
+}
 form input[type="text"], form input[type="password"] {
     width:50%;
     background-color: white;
     border-radius:3px;
 
+}
+form input[name="Perfil"], form input[name="CodUsuario"], form input[name="DescUsuario"]{
+    background-color: #EEEDD3;
+}
+#login input{
+     background-color: white;
 }
 input:focus {
     border-color: #00BA68;
@@ -126,20 +140,19 @@ form button{
     display: inline-block;
     font-size: 16px;
 }
-
-form input[name="eliminar"]{
-    text-decoration: none;
-    background-color:red;
+form button[name="editProfile"]:hover{
+    background-color: #2C6DA4;
 }
-
-input:read-only{
-    background-color: #EEEDD3;
+form button[name="deleteAccount"]:hover{
+    background-color: #B3283F;
 }
-
 form button:hover{
     cursor:pointer;
     color:black;
     background: white;
+}
+form button[name="Aceptar"]:hover{
+    background: #2CA442;
 }
 form button[name="Cancelar"]:hover{
     background: #A43533;

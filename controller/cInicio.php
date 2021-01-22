@@ -15,12 +15,23 @@ if (isset($_REQUEST['cerrarSesion'])) { // si se ha pulsado el boton de Cerrar S
     header("Location: index.php"); // redirige al login
     exit;
 }
-$oUsuarioActual = $_SESSION['usuarioDAW2LoginLogoffMulticapaPOO'];
+if (isset($_REQUEST['editProfile'])) { // si se ha pulsado el boton de Cerrar Sesion
+    $_SESSION['paginaEnCurso'] = $controladores['editProfile'];
+    header("Location: index.php"); // redirige al login
+    exit;
+}
 
-$numConexiones = $oUsuarioActual->getNumConexiones(); // variable que tiene el numero de conexiones sacado de la base de datos
-$descUsuario = $oUsuarioActual->getDescUsuario(); // variable que tiene la descripcion del usuario sacado de la base de datos
-$ultimaConexion = $oUsuarioActual->getFechaHoraUltimaConexion(); // variable que tiene la ultima hora de conexion del usuario
-$imagenUsuario = $oUsuarioActual->getImagenPerfil(); // variable que tiene la imagen de perfil del usuario
+if (isset($_REQUEST['deleteAccount'])) { // si se ha pulsado el boton de Cerrar Sesion
+    $_SESSION['paginaEnCurso'] = $controladores['deleteAccount'];
+    header("Location: index.php"); // redirige al login
+    exit;
+}
+$usuarioActual = $_SESSION['usuarioDAW2LoginLogoffMulticapaPOO'];
+$CodUser = $usuarioActual->getCodUsuario();
+$DescUser = $usuarioActual->getDescUsuario();
+$Profile = $usuarioActual->getPerfil();
+$ConexNumber = $usuarioActual->getNumConexiones();
+$LastDateConex = date('d/m/Y H:i:s', $usuarioActual->getFechaHoraUltimaConexion());
 
 $vistaEnCurso = $vistas['inicio']; // guardamos en la variable vistaEnCurso la vista que queremos implementar
 require_once $vistas['layout'];

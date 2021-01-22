@@ -1,15 +1,15 @@
 <header>
-    <a href="../indexProyectoDWES.php">
+    <!-- <a href="../indexProyectoDWES.php">
         <img class="imgprinc" src="webroot/css/img/flechaatras.png" alt="Atrás" title="Atrás"/>
-    </a>
+    </a>-->
     <a href="../../../../index.html">
         <img class="imgprinc" id="casa" src="webroot/css/img/inicio.png" alt="Página Principal" title="Página Principal"/>
     </a>
-    <h1 id="titulo">Registro</h1>
+    <h1 id="titulo"><?php echo $aLang[$_COOKIE['idioma']]['registration']; ?></h1>
 </header>
 <main>
 
-    <form name="singup" class="enter" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+    <form name="singup" id="login" class="enter" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
 
         <div class="required">
             <label for="CodUsuario"><?php echo $aLang[$_COOKIE['idioma']]['user']; ?></label>
@@ -52,7 +52,7 @@
         echo ($aErrores['PasswordConfirmacion'] != null) ? "<span style='color:#FF0000'>" . $aErrores['PasswordConfirmacion'] . "</span>" : null; // si el campo es erroneo se muestra un mensaje de error
         ?>
         <div class="registro">
-            <button class="button" type="submit" name="Registrarse"><?php echo $aLang[$_COOKIE['idioma']]['sign']; ?></button>
+            <button class="button" type="submit" name="Registrarse"><?php echo $aLang[$_COOKIE['idioma']]['signup']; ?></button>
             <button class="button" name="Cancelar"><?php echo $aLang[$_COOKIE['idioma']]['cancel']; ?></button>
         </div>
 
