@@ -20,6 +20,11 @@
                         <img id="imggit" title="GitHub" src="webroot/css/img/github.png"  alt="GITHUB">
                     </a>
                 </li>
+                <li>
+                    <a target="_blank" href="doc/index.html">
+                        <img id="doc" title="Documentación" src="webroot/css/img/documentos.png"  alt="Documentación">
+                    </a>
+                </li>
             </ul>            
         </footer>
     </body>
