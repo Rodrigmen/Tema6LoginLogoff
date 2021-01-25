@@ -208,6 +208,11 @@ footer ul li #imggit{
     height:3%;
     transition: 0.5s;
 }
+footer ul li #doc{
+    width:3%;
+    height:3%;
+    transition: 0.5s;
+}
 
 footer ul li #imggit:hover{
     filter: drop-shadow(0 2px 5px white);
