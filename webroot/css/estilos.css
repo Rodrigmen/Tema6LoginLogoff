@@ -4,7 +4,7 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+    font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif; 
 
 }
 /*HEADER -> TITULO E ICONO DE VOLVER ATRÁS*/
@@ -65,6 +65,7 @@ fieldset{
 .botones button:hover{
     color:white;
     background-color: black;
+    transition-duration: 500ms;
 }
 .enter{
     font-size: 2vh;
@@ -150,6 +151,7 @@ form button:hover{
     cursor:pointer;
     color:black;
     background: white;
+    transition-duration: 500ms;
 }
 form button[name="Aceptar"]:hover{
     background: #2CA442;
